@@ -2,6 +2,7 @@
 
 '''
 Using the "in" operator to search tuples, lists and dicts
+This can tell you if a particular value can be found in a list or tuple, but it can only find keys in dictionaries
 '''
 
 a = (3,4,5,6,7)
