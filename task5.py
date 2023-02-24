@@ -21,4 +21,16 @@ garlic
 fish
 stone
 wool
+
+example:
+>get food
+>get water
+>get water
+>get iron
+>inventory
+You have:
+ 1 food
+ 2 water
+ 1 iron
+ >
 """
