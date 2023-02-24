@@ -1,7 +1,24 @@
 #!python3
 """
-Have the user enter an integer value 'n'
-write a python script to use all of the integers from 1-n as the keys and the squares of those numbers as the values (2 points)
-sample result:
-x = { 1 : 1, 2 : 4, 3 : 9, 4 : 16, 5 : 25, 6 : 36, 7 : 49, 8 : 64, 9 : 81, 10 : 100 }
+##### Task 3
+create a dictionary for an inventory of items in a game.  Ask the user for input, and if the item they choose to 'get item', add that item to their inventory.  If they choose to drop item' remove that item from that invenory.  If they choose 'show inventory' give them a list of the items that they have.
+
+Possible extensions:
+* nicer format for displaying inventory
+* use shortened/abbreviated names for items (recognizing first few characters or spelling errors)
+
+items in inventory:
+food
+water
+rope
+torch
+sack
+wood
+iron
+steel
+ginger
+garlic
+fish
+stone
+wool
 """
