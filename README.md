@@ -6,6 +6,7 @@ Objectives:
 * Understand the difference between a tuple and a list
 * Create and use dictionary (dict) type variables
 * Explore how the "for" command can be used to iterate through a tuple, dict or list
+* Understand what is meant by a key,value pair
 
 tuples, lists and dicts are multi value variables.  There is no set number of values that they may store.
 
@@ -66,7 +67,7 @@ write a python script to use all of the integers from 1-10 as the keys and the s
 (2 points)
 
 ##### Task 5
-create a dictionary for an inventory of items in a game.  Ask the user for input, and if the item they choose to 'get item', add that item to their inventory.  If they choose to drop item' remove that item from that invenory.  If they choose 'show inventory' give them a list of the items that they have.
+create a dictionary for an inventory of items in a game.  Ask the user for input, and if the item they choose to 'get item', add that item to their inventory.  If they choose to drop item' remove that item from that invenory.  If they choose 'show inventory' give them a list of the items that they have. You will need to make use of the string.split() method in order to separate the item name from the action that precedes it.
 
 Possible extensions:
 * nicer format for displaying inventory

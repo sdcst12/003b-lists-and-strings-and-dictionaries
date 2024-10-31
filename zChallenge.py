@@ -1,4 +1,5 @@
 #!python3
+# Explain what this code does
 
 import random
 x = []
@@ -9,3 +10,5 @@ for i in range(40):
         x.append(random.randint(1,10) + random.randint(1,10)/10)
 
 print(x)
+
+
