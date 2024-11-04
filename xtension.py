@@ -36,3 +36,59 @@ You have:
  3 wood
  >
 """
+
+
+#Added spellcheck autocorrection autofill
+from spellchecker import SpellChecker
+
+spell = SpellChecker()
+
+inventory = {'armor': 1, 'helmet': 1, 'potion': 4, 'dagger': 1}
+
+def showInv():
+    print("\n" + "=" * 40)
+    print("|        INVENTORY                     |")
+    print("=" * 40)
+    if inventory:
+        for item, quantity in inventory.items():
+            print(f"|        {quantity} x {item.capitalize()[:15]:<25} |")
+    else:
+        print("|        Your inventory is empty       |")
+    print("=" * 40 + "\n")
+
+while True:
+    #input
+    print("\n" + "=" * 40)
+    print("|        COMMANDS                      |")
+    print("|------------------------------------  |")
+    print("|        get <item>                    |")
+    print("|        drop <item>                   |")
+    print("|        show inventory (show)         |")
+    print("|        quit (q)                      |")
+    print("=" * 40)
+    i = input("\n>>>")
+    i = i.split()
+
+    action = spell.correction(i[0].lower())
+
+    if action == "q":
+        print("Exiting the game... Goodbye!")
+        break
+    elif action == "show":
+        showInv()
+    elif action == 'get' or action == 'drop' and len(i) > 1:
+        item = spell.correction(i[1].lower())
+
+        if action == "get":
+            inventory[item] = inventory.get(item, 0) + 1
+            print(f"\nAdded {item.capitalize()} to your inventory.\n")
+        elif action == "drop":
+            if item in inventory:
+                inventory[item] -= 1
+                if inventory[item] <= 0:
+                    del inventory[item]
+                print(f"\nDropped {item.capitalize()} from your inventory.\n")
+            else:
+                print(f"\n{item.capitalize()} is not in your inventory.\n")
+    else:
+        print("\nInvalid input. Try again.\n")
