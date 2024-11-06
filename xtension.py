@@ -56,6 +56,7 @@ def showInv():
         print("|        Your inventory is empty       |")
     print("=" * 40 + "\n")
 
+
 while True:
     #input
     print("\n" + "=" * 40)
@@ -69,20 +70,19 @@ while True:
     i = input("\n>>>")
     i = i.split()
 
-    action = spell.correction(i[0].lower())
+    action = i[0].lower()
 
     if action == "q":
         print("Exiting the game... Goodbye!")
         break
-    elif action == "show":
+    elif action in 'show':
         showInv()
-    elif action == 'get' or action == 'drop' and len(i) > 1:
+    elif action in 'get' or action in 'drop' and len(i) > 1:
         item = spell.correction(i[1].lower())
-
-        if action == "get":
+        if action in 'get':
             inventory[item] = inventory.get(item, 0) + 1
             print(f"\nAdded {item.capitalize()} to your inventory.\n")
-        elif action == "drop":
+        elif action in 'drop':
             if item in inventory:
                 inventory[item] -= 1
                 if inventory[item] <= 0:
